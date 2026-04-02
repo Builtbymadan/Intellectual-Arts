@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beauty & Skincare | Intellectual Arts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <div class="logo-text">
+        <span class="logo-main">Intellectual</span>
+        <span class="logo-sub">Arts</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sarees.html">Sarees</a></li>
+      <li><a href="iot.html">IoT</a></li>
+      <li><a href="agricultural.html">Agricultural</a></li>
+      <li><a href="beauty.html">Beauty</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="cart-icon">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<a href="https://wa.me/910000000000?text=Hi%20Intellectual%20Arts!%20I%20am%20interested%20in%20your%20products." 
+   class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<div class="category-banner" style="background: linear-gradient(135deg, #8B5E3C, #C4956A);">
+  <h1>Beauty & Skincare</h1>
+  <p class="breadcrumb"><a href="index.html">Home</a> > Beauty</p>
+</div>
+<section class="container" style="padding: 60px 24px;">
+  <div class="product-grid">
+    
+<div class="product-card animate-on-scroll">
+  <div class="product-image-wrap">
+    <img src="images/beauty/strobe-1.jpg" alt="FacesCanada Strobe Cream" loading="lazy">
+    <span class="product-tag">Makeup</span>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">FacesCanada Strobe Cream</h3>
+    <div class="product-price-row">
+      <span class="product-price">₹420</span>
+    </div>
+    <div class="product-actions" style="margin-top:auto;">
+      <button class="btn-cart" onclick="addToCart('bea1','FacesCanada Strobe Cream',420,'images/beauty/strobe-1.jpg')">
+        <i class="fas fa-shopping-bag"></i> Add
+      </button>
+      <a href="beauty-strobe-cream.html" class="btn-view">View</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="product-card animate-on-scroll">
+  <div class="product-image-wrap">
+    <img src="images/beauty/gabit-1.jpg" alt="Gabit Skincare Kit" loading="lazy">
+    <span class="product-tag">Skincare</span>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Gabit Skincare Kit</h3>
+    <div class="product-price-row">
+      <span class="product-price">₹1,500</span>
+    </div>
+    <div class="product-actions" style="margin-top:auto;">
+      <button class="btn-cart" onclick="addToCart('bea2','Gabit Skincare Kit',1500,'images/beauty/gabit-1.jpg')">
+        <i class="fas fa-shopping-bag"></i> Add
+      </button>
+      <a href="beauty-gabit-kit.html" class="btn-view">View</a>
+    </div>
+  </div>
+</div>
+
+    
+<div class="product-card animate-on-scroll">
+  <div class="product-image-wrap">
+    <img src="images/beauty/shampoo-1.jpg" alt="Plum Coconut Shampoo" loading="lazy">
+    <span class="product-tag">Haircare</span>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Plum Coconut Shampoo</h3>
+    <div class="product-price-row">
+      <span class="product-price">₹280</span>
+    </div>
+    <div class="product-actions" style="margin-top:auto;">
+      <button class="btn-cart" onclick="addToCart('bea3','Plum Coconut Shampoo',280,'images/beauty/shampoo-1.jpg')">
+        <i class="fas fa-shopping-bag"></i> Add
+      </button>
+      <a href="beauty-plum-shampoo.html" class="btn-view">View</a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4 style="font-family: var(--font-display); font-size: 1.5rem; color: white;">Intellectual Arts</h4>
+      <p style="color: var(--green-light); font-weight: bold; margin-bottom: 16px;">Smart Living. Natural Roots.</p>
+      <p>Providing the finest handwoven sarees, innovative IoT devices, organic agricultural supplements, and scientifically-backed beauty products to Indian homes.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="sarees.html">Sarees</a>
+      <a href="iot.html">IoT Devices</a>
+      <a href="agricultural.html">Agricultural</a>
+      <a href="beauty.html">Beauty</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul class="footer-contact">
+        <li><i class="fas fa-phone"></i> <a href="tel:+910000000000" style="display:inline; margin:0; color:inherit;">+91 00000 00000</a></li>
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/910000000000" target="_blank" style="display:inline; margin:0; color:inherit;">+91 00000 00000</a></li>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:intellectualarts@gmail.com" style="display:inline; margin:0; color:inherit;">intellectualarts@gmail.com</a></li>
+        <li><i class="fas fa-clock"></i> Mon–Sat, 9 AM – 7 PM IST</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Intellectual Arts. All rights reserved. | Smart Living. Natural Roots.</p>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

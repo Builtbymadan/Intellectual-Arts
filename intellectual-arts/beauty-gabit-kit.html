@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gabit Skincare Kit | Intellectual Arts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <div class="logo-text">
+        <span class="logo-main">Intellectual</span>
+        <span class="logo-sub">Arts</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sarees.html">Sarees</a></li>
+      <li><a href="iot.html">IoT</a></li>
+      <li><a href="agricultural.html">Agricultural</a></li>
+      <li><a href="beauty.html">Beauty</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="cart-icon">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<a href="https://wa.me/910000000000?text=Hi%20Intellectual%20Arts!%20I%20am%20interested%20in%20your%20products." 
+   class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<div class="container product-detail-section">
+  <div class="product-gallery">
+    <div class="main-img-wrap">
+      <img src="images/beauty/gabit-1.jpg" id="mainImg" alt="Gabit Skincare Gamechangers Kit">
+    </div>
+    <div class="thumbnails">
+      <img src="images/beauty/gabit-1.jpg" class="thumb-img active"><img src="images/beauty/gabit-2.jpg" class="thumb-img "><img src="images/beauty/gabit-3.jpg" class="thumb-img ">
+    </div>
+  </div>
+  <div class="product-details-content">
+    <div class="badges">
+      <span class="badge">4-Step Routine</span><span class="badge">All Skin Types</span><span class="badge">Superfood + Probiotic</span>
+    </div>
+    <h1>Gabit Skincare Gamechangers Kit</h1>
+    <div class="price">₹1,500</div>
+    <p class="short-desc">Complete 4-step daily skincare routine for women and men. Includes Face Wash, Vitamin C Serum, Ceramide Moisturiser, and Mineral Sunscreen.</p>
+    
+    <div class="action-buttons">
+      <button class="btn btn-primary btn-block" onclick="addToCart('bea2','Gabit Skincare Gamechangers Kit',1500,'images/beauty/gabit-1.jpg')">
+        <i class="fas fa-shopping-bag"></i> Add to Cart
+      </button>
+      <a href="https://wa.me/910000000000?text=Hi!%20I%20want%20to%20order%20Gabit%20Skincare%20Gamechangers%20Kit%20(₹1,500).%20Please%20confirm." target="_blank" class="btn btn-secondary btn-block" style="display:flex; justify-content:center;">
+        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+      </a>
+    </div>
+    
+    <div class="product-tabs" style="font-size: 1.05rem;">
+      
+    <h2>Description</h2>
+    <p>Stop guessing your skincare routine. The Gabit Skincare Gamechangers Kit gives you a complete, science-backed 4-step daily routine in one box. All products are powered by Superfood, Prebiotic, and Probiotic actives. Suitable for all skin types, women and men.</p>
+    <h2>What's in the Kit</h2>
+    <ul class="product-meta">
+      <li><strong>1.</strong> Niacinamide & Hyaluronic Acid Face Wash (100ml)</li>
+      <li><strong>2.</strong> 8% Vitamin C Face Serum (30ml)</li>
+      <li><strong>3.</strong> Ceramide & Hyaluronic Face Moisturiser (50ml)</li>
+      <li><strong>4.</strong> 100% Mineral Sunscreen SPF 50+, PA++++ (50ml)</li>
+    </ul>
+    
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4 style="font-family: var(--font-display); font-size: 1.5rem; color: white;">Intellectual Arts</h4>
+      <p style="color: var(--green-light); font-weight: bold; margin-bottom: 16px;">Smart Living. Natural Roots.</p>
+      <p>Providing the finest handwoven sarees, innovative IoT devices, organic agricultural supplements, and scientifically-backed beauty products to Indian homes.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="sarees.html">Sarees</a>
+      <a href="iot.html">IoT Devices</a>
+      <a href="agricultural.html">Agricultural</a>
+      <a href="beauty.html">Beauty</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul class="footer-contact">
+        <li><i class="fas fa-phone"></i> <a href="tel:+910000000000" style="display:inline; margin:0; color:inherit;">+91 00000 00000</a></li>
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/910000000000" target="_blank" style="display:inline; margin:0; color:inherit;">+91 00000 00000</a></li>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:intellectualarts@gmail.com" style="display:inline; margin:0; color:inherit;">intellectualarts@gmail.com</a></li>
+        <li><i class="fas fa-clock"></i> Mon–Sat, 9 AM – 7 PM IST</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Intellectual Arts. All rights reserved. | Smart Living. Natural Roots.</p>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jade Printed Sari | Intellectual Arts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <div class="logo-text">
+        <span class="logo-main">Intellectual</span>
+        <span class="logo-sub">Arts</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sarees.html">Sarees</a></li>
+      <li><a href="iot.html">IoT</a></li>
+      <li><a href="agricultural.html">Agricultural</a></li>
+      <li><a href="beauty.html">Beauty</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="cart-icon">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<a href="https://wa.me/910000000000?text=Hi%20Intellectual%20Arts!%20I%20am%20interested%20in%20your%20products." 
+   class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+
+<div class="container product-detail-section">
+  <div class="product-gallery">
+    <div class="main-img-wrap">
+      <img src="images/sarees/jade-printed-1.jpg" id="mainImg" alt="Jade Printed Sari">
+    </div>
+    <div class="thumbnails">
+      <img src="images/sarees/jade-printed-1.jpg" class="thumb-img active"><img src="images/sarees/jade-printed-2.jpg" class="thumb-img "><img src="images/sarees/jade-printed-3.jpg" class="thumb-img "><img src="images/sarees/jade-printed-4.jpg" class="thumb-img ">
+    </div>
+  </div>
+  <div class="product-details-content">
+    <div class="badges">
+      <span class="badge">Handwoven</span><span class="badge">Premium Linen</span><span class="badge">Festive</span><span class="badge">Gota Kinari</span>
+    </div>
+    <h1>Jade Printed Sari</h1>
+    <div class="price">₹28,800</div>
+    <p class="short-desc">A handwoven linen sari adorned with a delicate floral cluster print and gota kinari border detailing — crafted to evoke festive joy and timeless elegance.</p>
+    
+    <div class="action-buttons">
+      <button class="btn btn-primary btn-block" onclick="addToCart('sar3','Jade Printed Sari',28800,'images/sarees/jade-printed-1.jpg')">
+        <i class="fas fa-shopping-bag"></i> Add to Cart
+      </button>
+      <a href="https://wa.me/910000000000?text=Hi%20Intellectual%20Arts!%20I%20am%20interested%20in%20the%20Jade%20Printed%20Sari.%20Please%20share%20pricing%20and%20availability." target="_blank" class="btn btn-secondary btn-block" style="display:flex; justify-content:center;">
+        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+      </a>
+    </div>
+    
+    <div class="product-tabs" style="font-size: 1.05rem;">
+      
+    <h2>Description</h2>
+    <p>The Jade Printed Sari is a work of art you can wear. Handwoven in fine linen, this sari features an all-over floral cluster print inspired by English garden motifs, rendered in soft pastels against a cool jade base. The delicate gota kinari border adds a flash of festive shimmer, making this sari perfect for weddings and celebrations. Each saree is woven individually, making yours truly one-of-a-kind.</p>
+    <h2>Details</h2>
+    <ul class="product-meta">
+      <li><strong>Fabric:</strong> Handwoven Linen</li>
+      <li><strong>Color:</strong> Jade / Mint Green with multicolour floral print</li>
+      <li><strong>Length:</strong> 6.3 metres</li>
+      <li><strong>Blouse Piece:</strong> Included (matching linen blouse)</li>
+      <li><strong>Embellishment:</strong> Gota kinari border detailing</li>
+      <li><strong>Care:</strong> Dry clean recommended</li>
+    </ul>
+    <p style="font-size:0.9rem; color: var(--text-mid); font-style: italic;">Price varies by customisation. Contact us via WhatsApp to discuss blouse size, finish, and delivery.</p>
+    
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4 style="font-family: var(--font-display); font-size: 1.5rem; color: white;">Intellectual Arts</h4>
+      <p style="color: var(--green-light); font-weight: bold; margin-bottom: 16px;">Smart Living. Natural Roots.</p>
+      <p>Providing the finest handwoven sarees, innovative IoT devices, organic agricultural supplements, and scientifically-backed beauty products to Indian homes.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="sarees.html">Sarees</a>
+      <a href="iot.html">IoT Devices</a>
+      <a href="agricultural.html">Agricultural</a>
+      <a href="beauty.html">Beauty</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul class="footer-contact">
+        <li><i class="fas fa-phone"></i> <a href="tel:+910000000000" style="display:inline; margin:0; color:inherit;">+91 00000 00000</a></li>
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/910000000000" target="_blank" style="display:inline; margin:0; color:inherit;">+91 00000 00000</a></li>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:intellectualarts@gmail.com" style="display:inline; margin:0; color:inherit;">intellectualarts@gmail.com</a></li>
+        <li><i class="fas fa-clock"></i> Mon–Sat, 9 AM – 7 PM IST</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Intellectual Arts. All rights reserved. | Smart Living. Natural Roots.</p>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
