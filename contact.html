@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Intellectual Arts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <div class="logo-text">
+        <span class="logo-main">Intellectual</span>
+        <span class="logo-sub">Arts</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sarees.html">Sarees</a></li>
+      <li><a href="iot.html">IoT</a></li>
+      <li><a href="agricultural.html">Agricultural</a></li>
+      <li><a href="beauty.html">Beauty</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://calendly.com/srinthiya2008/30min?month=2026-04" target="_blank" class="nav-cta">Book a Call</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="cart-icon">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<a href="https://wa.me/919080496866?text=Hi%20Intellectual%20Arts!%20I%20am%20interested%20in%20your%20products." 
+   class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<div class="category-banner" style="background: var(--brown);">
+  <h1 style="font-size: 3.5rem;">Contact Us</h1>
+  <p class="breadcrumb"><a href="index.html">Home</a> > Contact</p>
+</div>
+<section class="container" style="padding: 60px 24px;">
+  <div style="display: flex; gap: 40px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 300px; background: white; padding: 40px; border-radius: var(--radius); box-shadow: var(--shadow-sm);">
+      <h2 style="margin-bottom: 24px;">Send a Message</h2>
+      <form id="contactForm" style="display: flex; flex-direction: column; gap: 16px;">
+        <input type="text" placeholder="Your Name" required style="padding: 12px; border: 1px solid var(--cream-dark); border-radius: 4px; font-family: var(--font-body); font-size: 1rem;">
+        <input type="email" placeholder="Your Email" required style="padding: 12px; border: 1px solid var(--cream-dark); border-radius: 4px; font-family: var(--font-body); font-size: 1rem;">
+        <input type="tel" placeholder="Phone Number" style="padding: 12px; border: 1px solid var(--cream-dark); border-radius: 4px; font-family: var(--font-body); font-size: 1rem;">
+        <select style="padding: 12px; border: 1px solid var(--cream-dark); border-radius: 4px; font-family: var(--font-body); font-size: 1rem;">
+          <option value="Order Enquiry">Order Enquiry</option>
+          <option value="Product Question">Product Question</option>
+          <option value="Feedback">Feedback</option>
+          <option value="Other">Other</option>
+        </select>
+        <textarea placeholder="Your Message" rows="5" required style="padding: 12px; border: 1px solid var(--cream-dark); border-radius: 4px; font-family: var(--font-body); font-size: 1rem; resize: vertical;"></textarea>
+        <button type="submit" class="btn btn-primary" style="font-size: 1.1rem; padding: 16px;">Send Message</button>
+        <div id="contactSuccess" style="display: none;"></div>
+      </form>
+    </div>
+    <div style="flex: 1; min-width: 300px;">
+      <h2>Contact Details</h2>
+      <ul style="font-size: 1.1rem; line-height: 2; margin-top: 24px;">
+        <li><i class="fas fa-phone" style="color: var(--green); margin-right: 12px;"></i> <a href="tel:+910000000000">+91 00000 00000</a></li>
+        <li><i class="fab fa-whatsapp" style="color: var(--green); margin-right: 12px;"></i> <a href="https://wa.me/910000000000" target="_blank">+91 00000 00000</a></li>
+        <li><i class="fas fa-envelope" style="color: var(--green); margin-right: 12px;"></i> <a href="mailto:intellectualarts@gmail.com">intellectualarts@gmail.com</a></li>
+        <li><i class="fas fa-clock" style="color: var(--green); margin-right: 12px;"></i> Mon–Sat, 9 AM – 7 PM IST</li>
+      </ul>
+      
+      <div style="margin-top: 40px; background: #E8F5E9; border: 1px solid #C8E6C9; padding: 32px; border-radius: var(--radius); text-align: center;">
+        <i class="fab fa-whatsapp" style="font-size: 3rem; color: #25D366; margin-bottom: 16px;"></i>
+        <h3 style="color: #2C1810; margin-bottom: 16px;">Quickest way to reach us!</h3>
+        <p style="color: var(--text-mid); margin-bottom: 24px;">Message us on WhatsApp for instant support, order tracking, or product queries.</p>
+        <a href="https://wa.me/910000000000" target="_blank" class="btn" style="background: #25D366; color: white;">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4 style="font-family: var(--font-display); font-size: 1.5rem; color: white;">Intellectual Arts</h4>
+      <p style="color: var(--green-light); font-weight: bold; margin-bottom: 16px;">Smart Living. Natural Roots.</p>
+      <p>Providing the finest handwoven sarees, innovative IoT devices, organic agricultural supplements, and scientifically-backed beauty products to Indian homes.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="sarees.html">Sarees</a>
+      <a href="iot.html">IoT Devices</a>
+      <a href="agricultural.html">Agricultural</a>
+      <a href="beauty.html">Beauty</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul class="footer-contact">
+        <li><i class="fas fa-phone"></i> <a href="tel:+919080496866" style="display:inline; margin:0; color:inherit;">+91 90804 96866</a></li>
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919080496866" target="_blank" style="display:inline; margin:0; color:inherit;">+91 90804 96866</a></li>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:intellectualarts@gmail.com" style="display:inline; margin:0; color:inherit;">intellectualarts@gmail.com</a></li>
+        <li><i class="fas fa-clock"></i> Mon–Sat, 9 AM – 7 PM IST</li>
+        <li><i class="fas fa-calendar-alt"></i> <a href="https://calendly.com/srinthiya2008/30min?month=2026-04" target="_blank" style="display:inline; margin:0; color:inherit; font-weight:bold;">Book a Call</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Intellectual Arts. All rights reserved. | Smart Living. Natural Roots.</p>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

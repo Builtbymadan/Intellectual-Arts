@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ugaoo Vermicompost | Intellectual Arts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <div class="logo-text">
+        <span class="logo-main">Intellectual</span>
+        <span class="logo-sub">Arts</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sarees.html">Sarees</a></li>
+      <li><a href="iot.html">IoT</a></li>
+      <li><a href="agricultural.html">Agricultural</a></li>
+      <li><a href="beauty.html">Beauty</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://calendly.com/srinthiya2008/30min?month=2026-04" target="_blank" class="nav-cta">Book a Call</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="cart-icon">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<a href="https://wa.me/919080496866?text=Hi%20Intellectual%20Arts!%20I%20am%20interested%20in%20your%20products." 
+   class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<div class="container product-detail-section">
+  <div class="product-gallery">
+    <div class="main-img-wrap">
+      <img src="images/agri/vermi-1.jpg" id="mainImg" alt="Ugaoo Organic Vermicompost — 5 Kg">
+    </div>
+    <div class="thumbnails">
+      <img src="images/agri/vermi-1.jpg" class="thumb-img active"><img src="images/agri/vermi-2.jpg" class="thumb-img "><img src="images/agri/vermi-3.jpg" class="thumb-img ">
+    </div>
+  </div>
+  <div class="product-details-content">
+    <div class="badges">
+      <span class="badge">100% Organic</span><span class="badge">Odourless</span><span class="badge">Nutrient Rich</span><span class="badge">Premium Quality</span>
+    </div>
+    <h1>Ugaoo Organic Vermicompost — 5 Kg</h1>
+    <div class="price">₹300</div>
+    <p class="short-desc">Premium organic vermicompost — 100% organic, odourless, nutrient-rich, and beginner-friendly. The best topsoil enricher for all plant types.</p>
+    
+    <div class="action-buttons">
+      <button class="btn btn-primary btn-block" onclick="addToCart('agr2','Ugaoo Organic Vermicompost — 5 Kg',300,'images/agri/vermi-1.jpg')">
+        <i class="fas fa-shopping-bag"></i> Add to Cart
+      </button>
+      <a href="https://wa.me/919080496866?text=Hi!%20I%20want%20to%20order%20Ugaoo%20Vermicompost%205kg%20(₹300).%20Please%20confirm." target="_blank" class="btn btn-secondary btn-block" style="display:flex; justify-content:center;">
+        <i class="fab fa-whatsapp"></i> Order via WhatsApp
+      </a>
+      
+      <div style="margin-top: 24px; padding: 24px; background: var(--cream); border-radius: 8px;">
+        <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Customize your product?</h3>
+        <p style="font-size: 0.95rem; color: var(--text-mid); margin-bottom: 16px;">We offer bespoke tailoring for sarees and technical customization for IoT devices. Speak with our experts.</p>
+        <a href="https://calendly.com/srinthiya2008/30min?month=2026-04" target="_blank" class="btn btn-primary" style="background: var(--brown); width:100%;">
+          <i class="fas fa-calendar-check"></i> Book a Call
+        </a>
+      </div>
+    </div>
+    
+    <div class="product-tabs" style="font-size: 1.05rem;">
+      
+    <h2>Description</h2>
+    <p>Ugaoo Vermicompost is a premium-quality organic fertiliser produced by earthworms breaking down organic matter into a rich, dark, nutrient-dense compost. It gently feeds your plants with water-soluble nutrients they can absorb immediately. Completely odourless and safe for use around children and pets.</p>
+    <h2>Dosage</h2>
+    <ul class="product-meta">
+      <li><strong>Indoor Plants:</strong> 150–200g per plant, once in 30 days</li>
+      <li><strong>Outdoor Plants:</strong> 200–250g per plant, once in 30 days</li>
+    </ul>
+    
+    </div>
+  </div>
+</div>
+
+<section class="reviews-section">
+  <div class="container">
+    <h2 style="font-size: 2.5rem; margin-bottom: 40px;">Customer Reviews</h2>
+    
+    <div id="reviewsList" data-product-id="agr2">
+      <p style="color: var(--text-light);">Loading reviews...</p>
+    </div>
+
+    <div class="review-form-container">
+      <h3>Write a Review</h3>
+      <form id="reviewForm">
+        <div class="rating-input" id="ratingInput" data-rating="0">
+          <i class="far fa-star rating-star" data-value="1"></i>
+          <i class="far fa-star rating-star" data-value="2"></i>
+          <i class="far fa-star rating-star" data-value="3"></i>
+          <i class="far fa-star rating-star" data-value="4"></i>
+          <i class="far fa-star rating-star" data-value="5"></i>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px;">
+          <input type="text" id="reviewerName" placeholder="Your Name" required style="padding: 12px; border: 1px solid var(--cream-dark); border-radius: 4px;">
+          <input type="email" id="reviewerEmail" placeholder="Your Email" required style="padding: 12px; border: 1px solid var(--cream-dark); border-radius: 4px;">
+        </div>
+        <textarea id="reviewText" placeholder="Share your experience with this product..." rows="4" required style="width: 100%; padding: 12px; border: 1px solid var(--cream-dark); border-radius: 4px; margin-bottom: 16px;"></textarea>
+        <button type="submit" class="btn btn-primary">Submit Review</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4 style="font-family: var(--font-display); font-size: 1.5rem; color: white;">Intellectual Arts</h4>
+      <p style="color: var(--green-light); font-weight: bold; margin-bottom: 16px;">Smart Living. Natural Roots.</p>
+      <p>Providing the finest handwoven sarees, innovative IoT devices, organic agricultural supplements, and scientifically-backed beauty products to Indian homes.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="sarees.html">Sarees</a>
+      <a href="iot.html">IoT Devices</a>
+      <a href="agricultural.html">Agricultural</a>
+      <a href="beauty.html">Beauty</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul class="footer-contact">
+        <li><i class="fas fa-phone"></i> <a href="tel:+919080496866" style="display:inline; margin:0; color:inherit;">+91 90804 96866</a></li>
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919080496866" target="_blank" style="display:inline; margin:0; color:inherit;">+91 90804 96866</a></li>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:intellectualarts@gmail.com" style="display:inline; margin:0; color:inherit;">intellectualarts@gmail.com</a></li>
+        <li><i class="fas fa-clock"></i> Mon–Sat, 9 AM – 7 PM IST</li>
+        <li><i class="fas fa-calendar-alt"></i> <a href="https://calendly.com/srinthiya2008/30min?month=2026-04" target="_blank" style="display:inline; margin:0; color:inherit; font-weight:bold;">Book a Call</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Intellectual Arts. All rights reserved. | Smart Living. Natural Roots.</p>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

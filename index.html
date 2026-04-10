@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Intellectual Arts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <div class="logo-text">
+        <span class="logo-main">Intellectual</span>
+        <span class="logo-sub">Arts</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sarees.html">Sarees</a></li>
+      <li><a href="iot.html">IoT</a></li>
+      <li><a href="agricultural.html">Agricultural</a></li>
+      <li><a href="beauty.html">Beauty</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://calendly.com/srinthiya2008/30min?month=2026-04" target="_blank" class="nav-cta">Book a Call</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="cart-icon">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<a href="https://wa.me/919080496866?text=Hi%20Intellectual%20Arts!%20I%20am%20interested%20in%20your%20products." 
+   class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<section class="hero" style="height: 100vh; display:flex; align-items:center; position:relative; overflow:hidden;">
+  <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: var(--cream); z-index:-2;"></div>
+  <!-- SVG Pattern stub -->
+  <div style="position:absolute; bottom:-10%; right:-5%; z-index:-1; opacity: 0.1; color: var(--brown);">
+    <i class="fas fa-certificate" style="font-size: 600px;"></i>
+  </div>
+  
+  <div class="container text-center animate-on-scroll">
+    <h1 style="font-size: 72px; line-height: 1.1; margin-bottom: 24px;">Where Tradition<br>Meets Intelligence</h1>
+    <p style="font-size: 18px; color: var(--text-mid); max-width: 700px; margin: 0 auto 40px auto;">Premium Sarees · Smart IoT · Agricultural Essentials · Natural Beauty — Curated for the Modern Indian Family</p>
+    <div style="display:flex; justify-content:center; gap:16px;">
+      <a href="sarees.html" class="btn btn-primary" style="padding: 16px 32px; font-size: 1.1rem;">Explore Collections</a>
+      <a href="iot.html" class="btn btn-secondary" style="padding: 16px 32px; font-size: 1.1rem;">Shop IoT Products</a>
+    </div>
+  </div>
+</section>
+
+<section class="container" style="padding: 80px 24px;">
+  <h2 class="text-center animate-on-scroll" style="font-size: 48px; margin-bottom: 40px;">Our Collections</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+    <a href="sarees.html" style="background: linear-gradient(135deg, #8B5E3C, #C4956A); height: 320px; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; color: white;" class="animate-on-scroll">
+      <div style="font-size: 40px;">🧣</div>
+      <div>
+        <h3 style="color: white; font-family: var(--font-body); margin-bottom: 8px;">Handwoven Sarees</h3>
+        <p style="opacity: 0.9; margin-bottom: 16px;">Khadi Silk · Linen · Designer</p>
+        <span style="font-weight: bold;">Shop Sarees <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+    <a href="iot.html" style="background: linear-gradient(135deg, #2C1810, #5C3D2E); height: 320px; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; color: white;" class="animate-on-scroll">
+      <div style="font-size: 40px;">📡</div>
+      <div>
+        <h3 style="color: white; font-family: var(--font-body); margin-bottom: 8px;">Smart IoT Devices</h3>
+        <p style="opacity: 0.9; margin-bottom: 16px;">Kitchen · Garden · Pet Care</p>
+        <span style="font-weight: bold;">Shop IoT <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+    <a href="agricultural.html" style="background: linear-gradient(135deg, #2D5A27, #4A7C59); height: 320px; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; color: white;" class="animate-on-scroll">
+      <div style="font-size: 40px;">🌱</div>
+      <div>
+        <h3 style="color: white; font-family: var(--font-body); margin-bottom: 8px;">Agricultural Products</h3>
+        <p style="opacity: 0.9; margin-bottom: 16px;">Organic Fertilizers · Smart Farming</p>
+        <span style="font-weight: bold;">Shop Agri <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+    <a href="beauty.html" style="background: linear-gradient(135deg, #8B5E3C, #D4A5A5); height: 320px; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; justify-content: space-between; color: white;" class="animate-on-scroll">
+      <div style="font-size: 40px;">🌸</div>
+      <div>
+        <h3 style="color: white; font-family: var(--font-body); margin-bottom: 8px;">Beauty & Skincare</h3>
+        <p style="opacity: 0.9; margin-bottom: 16px;">Face Care · Hair Care · Glow</p>
+        <span style="font-weight: bold;">Shop Beauty <i class="fas fa-arrow-right"></i></span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="container" style="padding: 40px 24px;">
+  <h2 class="text-center animate-on-scroll" style="font-size: 42px;">Smart Living, Simplified</h2>
+  <p class="text-center animate-on-scroll" style="color: var(--text-mid); margin-bottom: 40px;">Our most loved IoT picks</p>
+  <div class="product-grid">
+    
+<div class="product-card animate-on-scroll">
+  <div class="product-image-wrap">
+    <img src="images/iot/upliance-1.jpg" alt="Upliance 1.0 AI Cooking Assistant" loading="lazy">
+    <span class="product-tag">IoT · Kitchen</span>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Upliance 1.0 AI Cooking Assistant</h3>
+    <div class="product-price-row">
+      <span class="product-price">₹27,000</span>
+    </div>
+    <div class="product-actions" style="margin-top:auto;">
+      <button class="btn-cart" onclick="addToCart('iot1','Upliance 1.0 AI Cooking Assistant',27000,'images/iot/upliance-1.jpg')">
+        <i class="fas fa-shopping-bag"></i> Add
+      </button>
+      <a href="iot-upliance.html" class="btn-view">View</a>
+    </div>
+  </div>
+</div>
+
+<div class="product-card animate-on-scroll">
+  <div class="product-image-wrap">
+    <img src="images/iot/ivy-1.jpg" alt="Ivy Smart Planter" loading="lazy">
+    <span class="product-tag">IoT · Garden</span>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Ivy Smart Planter</h3>
+    <div class="product-price-row">
+      <span class="product-price">₹9,000</span>
+    </div>
+    <div class="product-actions" style="margin-top:auto;">
+      <button class="btn-cart" onclick="addToCart('iot2','Ivy Smart Planter',9000,'images/iot/ivy-1.jpg')">
+        <i class="fas fa-shopping-bag"></i> Add
+      </button>
+      <a href="iot-ivy-planter.html" class="btn-view">View</a>
+    </div>
+  </div>
+</div>
+
+<div class="product-card animate-on-scroll">
+  <div class="product-image-wrap">
+    <img src="images/iot/petkit-1.jpg" alt="Petkit YumShare Dual Hopper" loading="lazy">
+    <span class="product-tag">IoT · Pet Care</span>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Petkit YumShare Dual Hopper</h3>
+    <div class="product-price-row">
+      <span class="product-price">₹17,000</span>
+    </div>
+    <div class="product-actions" style="margin-top:auto;">
+      <button class="btn-cart" onclick="addToCart('iot3','Petkit YumShare Dual Hopper',17000,'images/iot/petkit-1.jpg')">
+        <i class="fas fa-shopping-bag"></i> Add
+      </button>
+      <a href="iot-petkit.html" class="btn-view">View</a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<section class="container" style="padding: 40px 24px;">
+  <h2 class="text-center animate-on-scroll" style="font-size: 42px; margin-bottom: 40px;">The Saree Edit</h2>
+  <div class="product-grid">
+    
+<div class="product-card animate-on-scroll">
+  <div class="product-image-wrap">
+    <img src="images/sarees/rosita-teal-1.jpg" alt="Rosita Teal Sari" loading="lazy">
+    <span class="product-tag">Khadi Silk</span>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Rosita Teal Sari</h3>
+    <div class="product-price-row">
+      <span class="product-price">₹18,500</span>
+    </div>
+    <div class="product-actions" style="margin-top:auto;">
+      <button class="btn-cart" onclick="addToCart('sar1','Rosita Teal Sari',18500,'images/sarees/rosita-teal-1.jpg')">
+        <i class="fas fa-shopping-bag"></i> Add
+      </button>
+      <a href="saree-rosita-teal.html" class="btn-view">View</a>
+    </div>
+  </div>
+</div>
+
+<div class="product-card animate-on-scroll">
+  <div class="product-image-wrap">
+    <img src="images/sarees/rosita-pink-1.jpg" alt="Rosita Pink Sari" loading="lazy">
+    <span class="product-tag">Khadi Silk</span>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Rosita Pink Sari</h3>
+    <div class="product-price-row">
+      <span class="product-price">₹18,500</span>
+    </div>
+    <div class="product-actions" style="margin-top:auto;">
+      <button class="btn-cart" onclick="addToCart('sar2','Rosita Pink Sari',18500,'images/sarees/rosita-pink-1.jpg')">
+        <i class="fas fa-shopping-bag"></i> Add
+      </button>
+      <a href="saree-rosita-pink.html" class="btn-view">View</a>
+    </div>
+  </div>
+</div>
+
+<div class="product-card animate-on-scroll">
+  <div class="product-image-wrap">
+    <img src="images/sarees/jade-printed-1.jpg" alt="Jade Printed Sari" loading="lazy">
+    <span class="product-tag">Linen</span>
+  </div>
+  <div class="product-info">
+    <h3 class="product-name">Jade Printed Sari</h3>
+    <div class="product-price-row">
+      <span class="product-price">₹28,800</span>
+    </div>
+    <div class="product-actions" style="margin-top:auto;">
+      <button class="btn-cart" onclick="addToCart('sar3','Jade Printed Sari',28800,'images/sarees/jade-printed-1.jpg')">
+        <i class="fas fa-shopping-bag"></i> Add
+      </button>
+      <a href="saree-jade-printed.html" class="btn-view">View</a>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<section style="background: white; border-top: 1px solid var(--cream-dark); border-bottom: 1px solid var(--cream-dark); padding: 40px 0; margin-top: 60px;">
+  <div class="container" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 24px; text-align: center;">
+    <div style="flex:1; min-width:200px;" class="animate-on-scroll">
+      <i class="fas fa-leaf" style="font-size: 2rem; color: var(--green); margin-bottom: 16px;"></i>
+      <h4 style="margin-bottom: 8px;">100% Curated</h4>
+      <p style="font-size: 0.9rem; color: var(--text-mid);">Handpicked for Indian homes</p>
+    </div>
+    <div style="flex:1; min-width:200px;" class="animate-on-scroll">
+      <i class="fas fa-truck" style="font-size: 2rem; color: var(--green); margin-bottom: 16px;"></i>
+      <h4 style="margin-bottom: 8px;">Pan-India Delivery</h4>
+      <p style="font-size: 0.9rem; color: var(--text-mid);">Fast & reliable shipping</p>
+    </div>
+    <div style="flex:1; min-width:200px;" class="animate-on-scroll">
+      <i class="fas fa-check-circle" style="font-size: 2rem; color: var(--green); margin-bottom: 16px;"></i>
+      <h4 style="margin-bottom: 8px;">Quality Verified</h4>
+      <p style="font-size: 0.9rem; color: var(--text-mid);">Every product checked</p>
+    </div>
+    <div style="flex:1; min-width:200px;" class="animate-on-scroll">
+      <i class="fab fa-whatsapp" style="font-size: 2rem; color: var(--green); margin-bottom: 16px;"></i>
+      <h4 style="margin-bottom: 8px;">WhatsApp Support</h4>
+      <p style="font-size: 0.9rem; color: var(--text-mid);">Instant help always</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4 style="font-family: var(--font-display); font-size: 1.5rem; color: white;">Intellectual Arts</h4>
+      <p style="color: var(--green-light); font-weight: bold; margin-bottom: 16px;">Smart Living. Natural Roots.</p>
+      <p>Providing the finest handwoven sarees, innovative IoT devices, organic agricultural supplements, and scientifically-backed beauty products to Indian homes.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="sarees.html">Sarees</a>
+      <a href="iot.html">IoT Devices</a>
+      <a href="agricultural.html">Agricultural</a>
+      <a href="beauty.html">Beauty</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul class="footer-contact">
+        <li><i class="fas fa-phone"></i> <a href="tel:+919080496866" style="display:inline; margin:0; color:inherit;">+91 90804 96866</a></li>
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919080496866" target="_blank" style="display:inline; margin:0; color:inherit;">+91 90804 96866</a></li>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:intellectualarts@gmail.com" style="display:inline; margin:0; color:inherit;">intellectualarts@gmail.com</a></li>
+        <li><i class="fas fa-clock"></i> Mon–Sat, 9 AM – 7 PM IST</li>
+        <li><i class="fas fa-calendar-alt"></i> <a href="https://calendly.com/srinthiya2008/30min?month=2026-04" target="_blank" style="display:inline; margin:0; color:inherit; font-weight:bold;">Book a Call</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Intellectual Arts. All rights reserved. | Smart Living. Natural Roots.</p>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

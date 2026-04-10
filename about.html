@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Intellectual Arts</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+</head>
+<body>
+
+
+
+<nav class="navbar" id="navbar">
+  <div class="nav-container">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">✦</span>
+      <div class="logo-text">
+        <span class="logo-main">Intellectual</span>
+        <span class="logo-sub">Arts</span>
+      </div>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sarees.html">Sarees</a></li>
+      <li><a href="iot.html">IoT</a></li>
+      <li><a href="agricultural.html">Agricultural</a></li>
+      <li><a href="beauty.html">Beauty</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://calendly.com/srinthiya2008/30min?month=2026-04" target="_blank" class="nav-cta">Book a Call</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="cart.html" class="cart-icon">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="cart-count" id="cartCount">0</span>
+      </a>
+      <button class="hamburger" id="hamburger" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<a href="https://wa.me/919080496866?text=Hi%20Intellectual%20Arts!%20I%20am%20interested%20in%20your%20products." 
+   class="whatsapp-float" target="_blank" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
+<div class="category-banner" style="background: var(--brown);">
+  <h1 style="font-size: 3.5rem;">About Intellectual Arts</h1>
+  <p class="breadcrumb">Smart Living. Natural Roots.</p>
+</div>
+<section class="container" style="padding: 60px 24px;">
+  <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+    <h2 class="animate-on-scroll">Our Story</h2>
+    <p class="animate-on-scroll" style="font-size: 1.1rem; color: var(--text-mid); margin-bottom: 40px; text-align: left;">
+      Intellectual Arts was born from a simple but powerful belief — that exceptional products should be accessible to every Indian home. We are a multi-category curated brand bringing together the finest handwoven sarees from India's artisan tradition, cutting-edge IoT devices that make everyday life smarter, organic agricultural products rooted in sustainable farming, and natural beauty products that celebrate science and nature together. From the looms of skilled weavers to the labs of modern innovators, every product in our collection is handpicked for quality, authenticity, and value.
+    </p>
+  </div>
+  <h2 class="text-center animate-on-scroll" style="margin-top: 40px;">Our Values</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px;" class="animate-on-scroll">
+    <div style="background: white; padding: 32px; border-radius: 12px; box-shadow: var(--shadow-sm); text-align: center;">
+      <div style="font-size: 3rem; margin-bottom: 16px;">✅</div>
+      <h3 style="font-size: 1.5rem;">Quality First</h3>
+      <p style="color: var(--text-mid);">Every product rigorously verified before listing.</p>
+    </div>
+    <div style="background: white; padding: 32px; border-radius: 12px; box-shadow: var(--shadow-sm); text-align: center;">
+      <div style="font-size: 3rem; margin-bottom: 16px;">💛</div>
+      <h3 style="font-size: 1.5rem;">Customer Obsessed</h3>
+      <p style="color: var(--text-mid);">We are here to help, always — just WhatsApp us.</p>
+    </div>
+    <div style="background: white; padding: 32px; border-radius: 12px; box-shadow: var(--shadow-sm); text-align: center;">
+      <div style="font-size: 3rem; margin-bottom: 16px;">🇮🇳</div>
+      <h3 style="font-size: 1.5rem;">India-Rooted</h3>
+      <p style="color: var(--text-mid);">Supporting Indian artisans, farmers, and innovators.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <h4 style="font-family: var(--font-display); font-size: 1.5rem; color: white;">Intellectual Arts</h4>
+      <p style="color: var(--green-light); font-weight: bold; margin-bottom: 16px;">Smart Living. Natural Roots.</p>
+      <p>Providing the finest handwoven sarees, innovative IoT devices, organic agricultural supplements, and scientifically-backed beauty products to Indian homes.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="sarees.html">Sarees</a>
+      <a href="iot.html">IoT Devices</a>
+      <a href="agricultural.html">Agricultural</a>
+      <a href="beauty.html">Beauty</a>
+      <a href="about.html">About Us</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul class="footer-contact">
+        <li><i class="fas fa-phone"></i> <a href="tel:+919080496866" style="display:inline; margin:0; color:inherit;">+91 90804 96866</a></li>
+        <li><i class="fab fa-whatsapp"></i> <a href="https://wa.me/919080496866" target="_blank" style="display:inline; margin:0; color:inherit;">+91 90804 96866</a></li>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:intellectualarts@gmail.com" style="display:inline; margin:0; color:inherit;">intellectualarts@gmail.com</a></li>
+        <li><i class="fas fa-clock"></i> Mon–Sat, 9 AM – 7 PM IST</li>
+        <li><i class="fas fa-calendar-alt"></i> <a href="https://calendly.com/srinthiya2008/30min?month=2026-04" target="_blank" style="display:inline; margin:0; color:inherit; font-weight:bold;">Book a Call</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Intellectual Arts. All rights reserved. | Smart Living. Natural Roots.</p>
+  </div>
+</footer>
+
+<script src="js/cart.js"></script>
+<script src="js/reviews.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
