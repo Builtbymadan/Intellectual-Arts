@@ -1,0 +1,3 @@
+[build]
+  publish = "intellectual-arts/"
+  command = "# no build command needed"
